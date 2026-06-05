@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<h1>creating a class with properties and methods</h1>
+<?php
+class students{
+    public $name;
+    public $course;
+    public function introduce($name, $course){
+        $this->name = $name;
+        $this->course = $course;
+        echo "Hello, my name is " . $this->name . " and I am studying " . $this->course . ".";
+    }
+};
+$student1 = new students();
+$student1->introduce("phefry", "web development");
+ 
+?>
+<h2>  creating 3 students object</h2>
+<?php
+$student1 = new students();
+$student1->introduce("phefry", "web development <br>");
+$student2 = new students();
+$student2->introduce("david", "word press <br>");
+$student3 = new students();
+$student3->introduce("mary", "ui/ux design <br>");
+echo "<br>";
+echo "student 1 name: " . $student1->name . "<br>";
+echo "student 2 name: " . $student2->name . "<br>";
+echo "student 3 name: " . $student3->name . "<br>";
+?>
+<h2>class of trainers</h2>
+<?php
+class trainers{
+    public $name;
+    public $expertise;
+    public function introduce($name, $expertise){
+        $this->name = $name;
+        $this->expertise = $expertise;
+        echo "Hello, my name is " . $this->name . " and I am an expert in " . $this->expertise . ".";
+    }
+};
+$trainer1 = new trainers();
+$trainer1->introduce("alice", "gym training <br>");
+?>
+</body>
+</html>
